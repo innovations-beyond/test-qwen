@@ -1,0 +1,45 @@
+[project]
+name = "joelles-pastries-backend"
+version = "0.1.0"
+description = "Joelle's Pastries - Dessert Catering Backend"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "django==5.2.11",
+    "djangorestframework==3.16.1",
+    "dj-rest-auth[with-social]==7.0.2",
+    "django-allauth==65.14.0",
+    "django-solo==2.4.0",
+    "django-cors-headers==4.9.0",
+    "django-filter==25.2",
+    "dj-database-url==3.1.0",
+    "psycopg2-binary==2.9.11",
+    "gunicorn==25.0.2",
+    "whitenoise==6.11.0",
+    "stripe==12.5.0",
+    "sendgrid==6.12.5",
+    "pillow==11.3.0",
+    "django-storages==1.14.6",
+    "boto3==1.42.45",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.2",
+    "pytest-django==4.11.1",
+    "pytest-cov==6.2.1",
+    "black==26.1.0",
+    "isort==7.0.0",
+    "flake8==7.3.0",
+]
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 99
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "joelles_pastries.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]

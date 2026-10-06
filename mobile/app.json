@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Joelle's Pastries",
+    "slug": "joelles-pastries",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "joellespastries",
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "bundleIdentifier": "com.joellespastries.app"
+    },
+    "android": {
+      "package": "com.joellespastries.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
